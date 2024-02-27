@@ -10,7 +10,7 @@ import { ListingComponent } from './listing/listing.component';
     <h1>Saved Cars {{ savedCarList.length }}</h1>
     <section class="container">
       @for(carEntry of carList; track carEntry){
-        <app-listing [car]="carEntry" (click)=savedCarListHandler(carEntry)></app-listing>
+        <app-listing [car]="carEntry" (carSaved)="savedCarListHandler($event)"></app-listing>
       }
       
     </section>
