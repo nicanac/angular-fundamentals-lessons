@@ -10,9 +10,21 @@ import { ListingComponent } from './listing/listing.component';
     <h1>Saved Cars {{ savedCarList.length }}</h1>
     <section class="container">
       @for(carEntry of carList; track carEntry){
-        <app-listing [car]="carEntry" (carSaved)="savedCarListHandler($event)"></app-listing>
+      <app-listing
+        [car]="carEntry"
+        (carSaved)="savedCarListHandler($event)"
+      ></app-listing>
       }
-      
+    </section>
+    <br />
+    <h1>Saved Cars</h1>
+    <section class="container">
+      @for(savedCarEntry of savedCarList; track savedCarEntry){
+      <app-listing
+        [car]="savedCarEntry"
+        (carSaved)="savedCarListHandler($event)"
+      ></app-listing>
+      }
     </section>
   `,
   styles: [],
