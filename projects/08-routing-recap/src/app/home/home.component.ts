@@ -5,13 +5,7 @@ import { CommonModule } from '@angular/common';
   selector: 'app-home',
   standalone: true,
   imports: [CommonModule],
-  template: `
-    <p>
-      home works!
-    </p>
-  `,
-  styles: ``
+  template: ` <p>home page</p> `,
+  styles: ``,
 })
-export class HomeComponent {
-
-}
+export class HomeComponent {}
